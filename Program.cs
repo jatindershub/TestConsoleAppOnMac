@@ -10,6 +10,6 @@ var input2 = Console.ReadLine();
 var lolleren = "Dette er en tekststring";
 System.Console.WriteLine(lolleren);
 
-var person1 = new Person();
-person1.Name = "Jatinder";
-person1.Age = 31;
+var person1 = new Person("Jatinder",31);
+
+person1.Display();

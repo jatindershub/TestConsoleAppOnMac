@@ -12,3 +12,17 @@
 /Users/jatindersinghrooprai/TestConsoleApp/obj/Debug/net7.0/TestConsoleApp.pdb
 /Users/jatindersinghrooprai/TestConsoleApp/obj/Debug/net7.0/TestConsoleApp.genruntimeconfig.cache
 /Users/jatindersinghrooprai/TestConsoleApp/obj/Debug/net7.0/ref/TestConsoleApp.dll
+/Users/jatindersinghrooprai/Documents/GitHub/TestConsoleAppOnMac/bin/Debug/net7.0/TestConsoleApp
+/Users/jatindersinghrooprai/Documents/GitHub/TestConsoleAppOnMac/bin/Debug/net7.0/TestConsoleApp.deps.json
+/Users/jatindersinghrooprai/Documents/GitHub/TestConsoleAppOnMac/bin/Debug/net7.0/TestConsoleApp.runtimeconfig.json
+/Users/jatindersinghrooprai/Documents/GitHub/TestConsoleAppOnMac/bin/Debug/net7.0/TestConsoleApp.dll
+/Users/jatindersinghrooprai/Documents/GitHub/TestConsoleAppOnMac/bin/Debug/net7.0/TestConsoleApp.pdb
+/Users/jatindersinghrooprai/Documents/GitHub/TestConsoleAppOnMac/obj/Debug/net7.0/TestConsoleApp.GeneratedMSBuildEditorConfig.editorconfig
+/Users/jatindersinghrooprai/Documents/GitHub/TestConsoleAppOnMac/obj/Debug/net7.0/TestConsoleApp.AssemblyInfoInputs.cache
+/Users/jatindersinghrooprai/Documents/GitHub/TestConsoleAppOnMac/obj/Debug/net7.0/TestConsoleApp.AssemblyInfo.cs
+/Users/jatindersinghrooprai/Documents/GitHub/TestConsoleAppOnMac/obj/Debug/net7.0/TestConsoleApp.csproj.CoreCompileInputs.cache
+/Users/jatindersinghrooprai/Documents/GitHub/TestConsoleAppOnMac/obj/Debug/net7.0/TestConsoleApp.dll
+/Users/jatindersinghrooprai/Documents/GitHub/TestConsoleAppOnMac/obj/Debug/net7.0/refint/TestConsoleApp.dll
+/Users/jatindersinghrooprai/Documents/GitHub/TestConsoleAppOnMac/obj/Debug/net7.0/TestConsoleApp.pdb
+/Users/jatindersinghrooprai/Documents/GitHub/TestConsoleAppOnMac/obj/Debug/net7.0/TestConsoleApp.genruntimeconfig.cache
+/Users/jatindersinghrooprai/Documents/GitHub/TestConsoleAppOnMac/obj/Debug/net7.0/ref/TestConsoleApp.dll

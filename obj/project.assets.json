@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/jatindersinghrooprai/TestConsoleApp/TestConsoleApp.csproj",
+      "projectUniqueName": "/Users/jatindersinghrooprai/Documents/GitHub/TestConsoleAppOnMac/TestConsoleApp.csproj",
       "projectName": "TestConsoleApp",
-      "projectPath": "/Users/jatindersinghrooprai/TestConsoleApp/TestConsoleApp.csproj",
+      "projectPath": "/Users/jatindersinghrooprai/Documents/GitHub/TestConsoleAppOnMac/TestConsoleApp.csproj",
       "packagesPath": "/Users/jatindersinghrooprai/.nuget/packages/",
-      "outputPath": "/Users/jatindersinghrooprai/TestConsoleApp/obj/",
+      "outputPath": "/Users/jatindersinghrooprai/Documents/GitHub/TestConsoleAppOnMac/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/jatindersinghrooprai/.nuget/NuGet/NuGet.Config"
