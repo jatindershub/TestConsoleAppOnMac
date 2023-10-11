@@ -1,0 +1,14 @@
+/Users/jatindersinghrooprai/TestConsoleApp/bin/Debug/net7.0/TestConsoleApp
+/Users/jatindersinghrooprai/TestConsoleApp/bin/Debug/net7.0/TestConsoleApp.deps.json
+/Users/jatindersinghrooprai/TestConsoleApp/bin/Debug/net7.0/TestConsoleApp.runtimeconfig.json
+/Users/jatindersinghrooprai/TestConsoleApp/bin/Debug/net7.0/TestConsoleApp.dll
+/Users/jatindersinghrooprai/TestConsoleApp/bin/Debug/net7.0/TestConsoleApp.pdb
+/Users/jatindersinghrooprai/TestConsoleApp/obj/Debug/net7.0/TestConsoleApp.GeneratedMSBuildEditorConfig.editorconfig
+/Users/jatindersinghrooprai/TestConsoleApp/obj/Debug/net7.0/TestConsoleApp.AssemblyInfoInputs.cache
+/Users/jatindersinghrooprai/TestConsoleApp/obj/Debug/net7.0/TestConsoleApp.AssemblyInfo.cs
+/Users/jatindersinghrooprai/TestConsoleApp/obj/Debug/net7.0/TestConsoleApp.csproj.CoreCompileInputs.cache
+/Users/jatindersinghrooprai/TestConsoleApp/obj/Debug/net7.0/TestConsoleApp.dll
+/Users/jatindersinghrooprai/TestConsoleApp/obj/Debug/net7.0/refint/TestConsoleApp.dll
+/Users/jatindersinghrooprai/TestConsoleApp/obj/Debug/net7.0/TestConsoleApp.pdb
+/Users/jatindersinghrooprai/TestConsoleApp/obj/Debug/net7.0/TestConsoleApp.genruntimeconfig.cache
+/Users/jatindersinghrooprai/TestConsoleApp/obj/Debug/net7.0/ref/TestConsoleApp.dll
