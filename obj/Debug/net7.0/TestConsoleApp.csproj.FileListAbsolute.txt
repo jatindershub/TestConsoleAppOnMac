@@ -26,3 +26,7 @@
 /Users/jatindersinghrooprai/Documents/GitHub/TestConsoleAppOnMac/obj/Debug/net7.0/TestConsoleApp.pdb
 /Users/jatindersinghrooprai/Documents/GitHub/TestConsoleAppOnMac/obj/Debug/net7.0/TestConsoleApp.genruntimeconfig.cache
 /Users/jatindersinghrooprai/Documents/GitHub/TestConsoleAppOnMac/obj/Debug/net7.0/ref/TestConsoleApp.dll
+/Users/jatindersinghrooprai/Documents/GitHub/TestConsoleAppOnMac/bin/Debug/net7.0/Microsoft.Extensions.Logging.Abstractions.dll
+/Users/jatindersinghrooprai/Documents/GitHub/TestConsoleAppOnMac/bin/Debug/net7.0/Npgsql.dll
+/Users/jatindersinghrooprai/Documents/GitHub/TestConsoleAppOnMac/obj/Debug/net7.0/TestConsoleApp.csproj.AssemblyReference.cache
+/Users/jatindersinghrooprai/Documents/GitHub/TestConsoleAppOnMac/obj/Debug/net7.0/TestConsoleApp.csproj.CopyComplete

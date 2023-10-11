@@ -1,15 +1,17 @@
 ﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Dette er en test");
+using System.ComponentModel.Design;
+using Npgsql;
+using NpgsqlTypes;
 
-var input = Console.ReadLine();
-Console.WriteLine(String.Format("Hej med dig. Du har indtastet {0}",input));
+Console.WriteLine("Tester forbindelse til psql RUC database + Opretter bruger");
 
-var input2 = Console.ReadLine();
-// indsætter test kommentar
+var psql = new Connection();
 
-var lolleren = "Dette er en tekststring";
-System.Console.WriteLine(lolleren);
-
-var person1 = new Person("Jatinder",31);
-
-person1.Display();
+try
+{
+    psql.CreateUser("test2","kode2");
+}
+catch (Exception e)
+{
+    Console.WriteLine(e.Message);
+}

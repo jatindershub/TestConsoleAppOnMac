@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "YcrpVApTWqItG1vXcDDxzY1WYdFcB9MpY4QpXUuO7YAIJ00NJ6rX03VYY743F7mG0kBV8qUUMtzJhp3mNDdz3g==",
+  "dgSpecHash": "CgCbo2NUUEgM1vWCCqQ/PgOi08QpH4U/3o6FtdWa81FBBXZU+TUlE8N/X22KBFYEsAQud38CSsbA3DR0T6lMZQ==",
   "success": true,
   "projectFilePath": "/Users/jatindersinghrooprai/Documents/GitHub/TestConsoleAppOnMac/TestConsoleApp.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/Users/jatindersinghrooprai/.nuget/packages/microsoft.extensions.logging.abstractions/6.0.0/microsoft.extensions.logging.abstractions.6.0.0.nupkg.sha512",
+    "/Users/jatindersinghrooprai/.nuget/packages/npgsql/7.0.6/npgsql.7.0.6.nupkg.sha512"
+  ],
   "logs": []
 }
