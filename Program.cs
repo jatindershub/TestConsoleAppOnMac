@@ -3,15 +3,33 @@ using System.ComponentModel.Design;
 using Npgsql;
 using NpgsqlTypes;
 
-Console.WriteLine("Tester forbindelse til psql RUC database + Opretter bruger");
+Console.WriteLine("Opret bruger igennem C# og PSQL");
+Console.Write("Indtast brugernavn: ");
+var brugernavn = Console.ReadLine();
+
+Console.Write("Indtast adgangskode: ");
+var adgangskode = Console.ReadLine();
+
+if (string.IsNullOrWhiteSpace(adgangskode))
+{
+    throw new NullReferenceException();
+}
 
 var psql = new Connection();
+var user = new User();
 
+var hashedAdgangskode = user.HashUserPassword(adgangskode);
 try
 {
-    psql.CreateUser("test2","kode2");
+    if (string.IsNullOrWhiteSpace(brugernavn) || string.IsNullOrWhiteSpace(hashedAdgangskode))
+    {
+        throw new ArgumentNullException();
+    }
+
+    psql.CreateUser(brugernavn,hashedAdgangskode);
+    Console.WriteLine($"Brugeren {brugernavn} er nu oprettet!");
 }
 catch (Exception e)
 {
-    Console.WriteLine(e.Message);
+    Console.WriteLine($"Der skete en fejl i oprettelsen af brugeren. Fejlbeked: {e.Message}");
 }
