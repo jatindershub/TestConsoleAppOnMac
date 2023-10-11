@@ -2,4 +2,4 @@
 Console.WriteLine("Dette er en test");
 
 var input = Console.ReadLine();
-Console.WriteLine(String.Format("Hej med dig. Du har indtastet {0}"),input);
+Console.WriteLine(String.Format("Hej med dig. Du har indtastet {0}",input));
