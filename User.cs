@@ -1,29 +1,73 @@
-using System.Security.Cryptography;
-using System.Text;
+using Npgsql;
+using NpgsqlTypes;
 
-class User
+class User : DatabaseConnection
 {
-    public string HashUserPassword(string password)
+    public void CreateUser(string username, string password)
     {
-        // Convert the input string to a byte array
-        byte[] data = Encoding.UTF8.GetBytes(password);
+        using var connection = Connection;
+        connection.Open();
 
-        // Create a new instance of the SHA256 class
-        using SHA256 sha256Hash = SHA256.Create();
-
-        // Compute the hash
-        byte[] hash = sha256Hash.ComputeHash(data);
-
-        // Convert the byte array to a hexadecimal string
-        StringBuilder hashStringBuilder = new StringBuilder();
-
-        for (int i = 0; i < hash.Length; i++)
-        {
-            hashStringBuilder.Append(hash[i].ToString("x2"));
-        }
-
-        string hashedPassword = hashStringBuilder.ToString();
+        // Query, der skal udføres
+        using var command = new NpgsqlCommand("SELECT CreateUser(@username, @password)", connection);
         
-        return hashedPassword;
+        // Opretter parametre med specifik NpgsqlDbType
+        var usernameParam = new NpgsqlParameter("username", NpgsqlDbType.Citext)
+        {
+            Value = username
+        };
+
+        var passwordParam = new NpgsqlParameter("password", NpgsqlDbType.Varchar)
+        {
+            Value = password
+        };
+
+        // Sætter parametrene til query'en
+        command.Parameters.Add(usernameParam);
+        command.Parameters.Add(passwordParam);
+
+        try
+        {
+            // Udfører query
+            var result = command.ExecuteScalar();
+            Console.WriteLine($"Result: {result}");
+        }
+        catch (NpgsqlException e)
+        {
+            // Skriver exception ud fra psql funktion
+            Console.WriteLine($"Der skete en fejl. Fejlbesked: {e.Message}");
+        }
+        {
+            connection.Close();
+        }
+    }
+
+    public int GetUserIdByUsername(string username)
+    {
+        using var connection = Connection;
+        connection.Open();
+
+        using var command = new NpgsqlCommand("SELECT GetUserIdByUsername(@username)", connection);
+        var usernameParam = new NpgsqlParameter("username", NpgsqlDbType.Citext)
+        {
+            Value = username
+        };
+
+        command.Parameters.Add(usernameParam);
+
+        try
+        {
+            var result = Convert.ToInt32(command.ExecuteScalar());
+            return result;
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine($"Der skete en fejl. Fejlbesked: {e.Message}");
+            throw;
+        }
+        finally
+        {
+            connection.Close();
+        }
     }
 }

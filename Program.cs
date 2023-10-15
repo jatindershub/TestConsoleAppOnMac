@@ -1,4 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
+var user = new User();
+var helper = new Helper();
 
 Console.WriteLine("Opret bruger igennem C# og PSQL");
 Console.Write("Indtast brugernavn: ");
@@ -7,9 +9,6 @@ var brugernavn = Console.ReadLine();
 Console.Write("Indtast adgangskode: ");
 var adgangskode = Console.ReadLine();
 
-var dbConnection = new DatabaseConnection();
-var user = new User();
-
 try
 {
     if (string.IsNullOrWhiteSpace(brugernavn) || string.IsNullOrWhiteSpace(adgangskode))
@@ -17,10 +16,11 @@ try
         throw new ArgumentNullException();
     }
 
-    var hashedAdgangskode = user.HashUserPassword(adgangskode);
+    var hashedAdgangskode = helper.Hash(adgangskode);
 
-    dbConnection.CreateUser(brugernavn,hashedAdgangskode);
+    user.CreateUser(brugernavn,hashedAdgangskode);
     Console.WriteLine($"Brugeren {brugernavn} er nu oprettet!");
+    Console.WriteLine("Bruger id er: " + user.GetUserIdByUsername(brugernavn).ToString());
 }
 catch (ArgumentNullException)
 {
