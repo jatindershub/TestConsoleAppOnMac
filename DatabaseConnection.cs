@@ -1,9 +1,7 @@
-using System.Reflection.Metadata.Ecma335;
-using Microsoft.VisualBasic;
 using Npgsql;
 using NpgsqlTypes;
 
-class Connection
+class DatabaseConnection
 {
     protected string Host = "cit.ruc.dk";
     protected string Port = "5432";
@@ -26,12 +24,12 @@ class Connection
         using var command = new NpgsqlCommand("SELECT CreateUser(@username, @password)", connection);
         
         // Opretter parametre med specifik NpgsqlDbType
-        NpgsqlParameter usernameParam = new NpgsqlParameter("username", NpgsqlDbType.Citext)
+        var usernameParam = new NpgsqlParameter("username", NpgsqlDbType.Citext)
         {
             Value = username
         };
 
-        NpgsqlParameter passwordParam = new NpgsqlParameter("password", NpgsqlDbType.Varchar)
+        var passwordParam = new NpgsqlParameter("password", NpgsqlDbType.Varchar)
         {
             Value = password
         };
@@ -48,8 +46,8 @@ class Connection
         }
         catch (NpgsqlException ex)
         {
-            // Skriver exception ud fra psql
+            // Skriver exception ud fra psql funktion
             Console.WriteLine($"An error occurred: {ex.Message}");
         }
-        }
+    }
 }
