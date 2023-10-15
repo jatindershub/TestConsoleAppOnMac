@@ -2,31 +2,14 @@
 var user = new User();
 var helper = new Helper();
 
-Console.WriteLine("Opret bruger igennem C# og PSQL");
 Console.Write("Indtast brugernavn: ");
-var brugernavn = Console.ReadLine();
+string brugernavn = Console.ReadLine();
 
 Console.Write("Indtast adgangskode: ");
-var adgangskode = Console.ReadLine();
+string adgangskode = Console.ReadLine();
 
-try
-{
-    if (string.IsNullOrWhiteSpace(brugernavn) || string.IsNullOrWhiteSpace(adgangskode))
-    {
-        throw new ArgumentNullException();
-    }
+var hashedAdgangskode = helper.Hash(adgangskode);
+user.CreateUser(brugernavn,hashedAdgangskode);
 
-    var hashedAdgangskode = helper.Hash(adgangskode);
-
-    user.CreateUser(brugernavn,hashedAdgangskode);
-    Console.WriteLine($"Brugeren {brugernavn} er nu oprettet!");
-    Console.WriteLine("Bruger id er: " + user.GetUserIdByUsername(brugernavn).ToString());
-}
-catch (ArgumentNullException)
-{
-    Console.WriteLine("Brugernavn eller adgangskode må ikke være null");
-}
-catch (Exception e)
-{
-    Console.WriteLine($"Der skete en ukendt fejl i oprettelsen af brugeren. Fejlbeked: {e.Message}");
-}
+var brugerId = user.GetUserIdByUsername(brugernavn);
+Console.WriteLine($"BrugerId for bruger {brugernavn} er {brugerId.ToString()}");
