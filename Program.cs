@@ -2,14 +2,33 @@
 var user = new User();
 var helper = new Helper();
 
-Console.Write("Indtast brugernavn: ");
-string brugernavn = Console.ReadLine();
+Console.WriteLine("Indtast 1 for oprettelse af bruger, eller tast 2 for opdatering af adgangskode for bruger");
+var response = Console.ReadLine();
 
-Console.Write("Indtast adgangskode: ");
-string adgangskode = Console.ReadLine();
+if (response == "1")
+{   
+    Metode1();    
+} else
+{
+    Metode2();
+}
 
-var hashedAdgangskode = helper.Hash(adgangskode);
-user.CreateUser(brugernavn,hashedAdgangskode);
+void Metode1()
+{
+    Console.Write("Indtast brugernavn: ");
+    string brugernavn = Console.ReadLine();
 
-var brugerId = user.GetUserIdByUsername(brugernavn);
-Console.WriteLine($"BrugerId for bruger {brugernavn} er {brugerId.ToString()}");
+    Console.Write("Indtast adgangskode: ");
+    string adgangskode = Console.ReadLine();
+
+    var hashedAdgangskode = helper.Hash(adgangskode);
+    user.CreateUser(brugernavn,hashedAdgangskode);
+
+    var brugerId = user.GetUserIdByUsername(brugernavn);
+    Console.WriteLine($"BrugerId for bruger {brugernavn} er {brugerId.ToString()}");
+}
+
+void Metode2()
+{
+    
+}
