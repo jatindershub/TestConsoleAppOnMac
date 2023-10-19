@@ -1,5 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
-var user = new User();
+
+/*var user = new User();
 var helper = new Helper();
 
 Console.WriteLine("Indtast 1 for oprettelse af bruger, eller tast 2 for opdatering af adgangskode for bruger");
@@ -31,4 +32,5 @@ void Metode1()
 void Metode2()
 {
     
-}
+}*/
+
