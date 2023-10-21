@@ -34,3 +34,12 @@ void Metode2()
     
 }*/
 
+try
+{
+    Console.WriteLine("Indtast et tal");
+    int userInput = Convert.ToInt32(Console.ReadLine());   
+}
+catch (Exception e)
+{
+    Console.WriteLine("Du har ikke indtastet et tal. Fejlbesked: " + e.Message);
+}
